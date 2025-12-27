@@ -26,6 +26,18 @@ export function getDeliveryOption(deliveryOptionId) {
   return deliveryOption || deliveryOption[0];
 }
 
+export function isValidDeliveryOption(deliveryOptionId) {
+  let validId = false;
+
+  deliveryOptions.forEach((option) => {
+    if(option.id === deliveryOptionId) {
+      validId = true;
+    }
+  });
+
+  return validId;
+}
+
 function isWeekend(date) {
   const day = date.day();       // 0 = Sunday, 6 = Saturday
   return day === 0 || day === 6;
