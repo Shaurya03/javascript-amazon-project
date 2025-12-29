@@ -20,7 +20,6 @@ class Product {
   priceCents;
   keywords;
 
-
 constructor (productDetails) {
   this.id = productDetails.id;
   this.image = productDetails.image;

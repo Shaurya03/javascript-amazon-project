@@ -4,9 +4,8 @@ import {
   updateQuantity,
   updateDeliveryOption 
 } from '../data/cart.js';
-import { products, getProduct } from '../data/products.js';         // {} named export
+import { getProduct } from '../data/products.js';         // {} named export
 import { formatCurrency } from '../utils/money.js';
-import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';   // default export
 import { calculateDeliveryDate, deliveryOptions, getDeliveryOption } from '../data/delivery-options.js';
 import { renderPaymentSummary } from './payment-summary.js';
 import { renderCheckoutHeader } from './checkout-header.js';
