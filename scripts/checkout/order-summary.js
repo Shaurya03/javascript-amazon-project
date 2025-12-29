@@ -1,7 +1,6 @@
 import {
   cart,
   removeFromCart,
-  calculateCartQuantity,
   updateQuantity,
   updateDeliveryOption 
 } from '../data/cart.js';
