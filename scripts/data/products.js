@@ -106,7 +106,10 @@ export function loadProductsFetch (fun) {
       return new Product(productDetails);
     });
 
-    fun();
+    if (fun) {
+      fun();
+    }
+    
     console.log('load products');
   }).catch((error) => {
     console.log('Unexpected error. Please try again later.');
