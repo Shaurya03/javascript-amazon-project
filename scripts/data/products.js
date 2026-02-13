@@ -88,7 +88,7 @@ function isAppliance(productDetails) {
   return productDetails.keywords?.includes('appliances');
 }
 
-export function loadProductsFetch () {
+export function loadProductsFetch (fun) {
   const promise = fetch(
     'https://supersimplebackend.dev/products'
   ).then((response) => {
@@ -106,6 +106,7 @@ export function loadProductsFetch () {
       return new Product(productDetails);
     });
 
+    fun();
     console.log('load products');
   }).catch((error) => {
     console.log('Unexpected error. Please try again later.');
